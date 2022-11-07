@@ -1,18 +1,25 @@
+import {auth} from '../../firebaseConnection';
+import { signInWithEmailAndPassword } from 'firebase/auth’;
+import { useNavigate } from 'react-router-dom';
 import {useState} from 'react';
 import './register.css'
 
-function handleLogin(e){
+async function handleLogin(e){
     e.preventDefault();
     if(email !== '' && password !==''){
-        alert("TESTE")
-    }else{
-        alert("Preencha todos os campos!")
+        await signInWithEmailAndPassword(auth,email,password)
+    .then(()=>{
+        navigate('/admin',{replace:true})
+    })
+    .catch(()=>{
+        console.log("Erro ao fazer login")
     }
 }
 
 function Register() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
     return (
         <div className='home-container'>
             <h1>Cadastre-se</h1>
