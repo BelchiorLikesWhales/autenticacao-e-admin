@@ -3,13 +3,12 @@ import {getFirestore} from 'firebase/firestore'
 import {getAuth} from 'firebase/auth'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAsmqnPGZS9jsuvCIAeqmFcllrSpPmYKIo",
-  authDomain: "aula3-e0be9.firebaseapp.com",
-  projectId: "aula3-e0be9",
-  storageBucket: "aula3-e0be9.appspot.com",
-  messagingSenderId: "785748823947",
-  appId: "1:785748823947:web:fb29029d713f6b30c7298e",
-  measurementId: "G-BDTPNZ2KNZ"
+  apiKey: "AIzaSyCLv_XJcBtiN8TLZD2lL-sSV72g-UzWJJM",
+  authDomain: "aula-pw-dos-crias.firebaseapp.com",
+  projectId: "aula-pw-dos-crias",
+  storageBucket: "aula-pw-dos-crias.appspot.com",
+  messagingSenderId: "684215394888",
+  appId: "1:684215394888:web:0e5f732ce68f3f61d8ae7d"
 };
   const firebaseApp = initializeApp(firebaseConfig);
   const db = getFirestore(firebaseApp);
